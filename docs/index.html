@@ -31,8 +31,8 @@
 <details open="open">
   <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
   <ol>
-    <li><a href="#installation-visual-studio-code"><h3>Installation (Visual Studio Code)</h3></a></li>
-    <li><h3>Usage</h3><ul><li><a href="#song-microservice">Song Microservice</a></li><li><a href="#profile-microservice">Profile Microservice</a></li></ul</li>
+    <li><a href="#installation-visual-studio-code">Installation (Visual Studio Code)</a></li>
+    <li>Usage<ul><li><a href="#song-microservice">Song Microservice</a></li><li><a href="#profile-microservice">Profile Microservice</a></li></ul</li>
   </ol>
 </details>
 <br />
@@ -49,7 +49,7 @@
 <li><a href="https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack">Spring Boot Extension Pack for Visual Studio Code</a></li>
 </ul>
 <p>After installing the prerequisites, load the project and Maven and Spring Boot tools should show automagically. 🚀</p>
-<img src="file:////home/navinn/Code/spotify-api-clone/docs/springboot.png" height="200">   
+<img src="https://raw.githubusercontent.com/navn-r/spotify-api-clone/main/docs/springboot.png" height="200">   
 <p><em>Press <code>Start</code> in the Spring Boot Dashboard and select both microservices</em></p>
 <p><strong>Note:</strong> Both the Neo4j and MongoDB databases should be running <strong><em>before</em></strong> starting both microservices.</p>
 <p>By default, the Song Microservice runs on port <code>3001</code>, and port <code>3002</code> for the Profile Microservice.</p>
@@ -87,6 +87,8 @@
   <span class="hljs-attr">&quot;data&quot;</span>: <span class="hljs-string">&quot;Never gonna give you up&quot;</span>
 }
 </div></code></pre>
+<br />
+<br />
 <h3 id="delete--deletesongbyidsongid">DELETE  <code>/deleteSongById/{songId}</code></h3>
 <blockquote>
 <p>Deletes the song from MongoDB and all Profiles that have added it to their favorites list.</p>
@@ -100,6 +102,8 @@
 <li><code>OK</code>, if the song was deleted successfully</li>
 <li><code>&lt;string&gt;</code>, any other status if the song was not deleted successfully</li>
 </ul>
+<br />
+<br />
 <h3 id="post--addsong">POST  <code>/addSong</code></h3>
 <blockquote>
 <p>Adds a song to the database.</p>
@@ -136,6 +140,8 @@
   ​<span class="hljs-attr">&quot;status&quot;</span>​: ​<span class="hljs-string">&quot;OK&quot;</span>
 }
 </div></code></pre>
+<br />
+<br />
 <h3 id="put-updatesongfavouritescountsongidshoulddecrement">PUT <code>/updateSongFavouritesCount/{songId}?shouldDecrement=</code></h3>
 <blockquote>
 <p>Updates the song's favorites count.</p>
@@ -184,6 +190,8 @@
 </ul>
 </li>
 </ul>
+<br />
+<br />
 <h3 id="put--followfriendusernamefriendusername">PUT  <code>/followFriend/{username}/{friendUserName}</code></h3>
 <blockquote>
 <p>Allows a profile to follow another profile.</p>
@@ -202,6 +210,8 @@
 </ul>
 </li>
 </ul>
+<br />
+<br />
 <h3 id="put--unfollowfriendusernamefriendusername">PUT  <code>/unfollowFriend/{username}/{friendUserName}</code></h3>
 <blockquote>
 <p>Allows a profile to unfollow another profile.</p>
@@ -220,6 +230,8 @@
 </ul>
 </li>
 </ul>
+<br />
+<br />
 <h3 id="put--likesongusernamesongid">PUT  <code>/likeSong/{userName}/{songId}</code></h3>
 <blockquote>
 <p>Allows a profile to like a song and add it to their liked songs playlist.</p>
@@ -238,6 +250,8 @@
 </ul>
 </li>
 </ul>
+<br />
+<br />
 <h3 id="put--unlikesongusernamesongid">PUT  <code>/unlikeSong/{userName}/{songId}</code></h3>
 <blockquote>
 <p>Allows a profile to unlike a song and add it to their liked songs playlist.</p>
@@ -256,6 +270,8 @@
 </ul>
 </li>
 </ul>
+<br />
+<br />
 <h3 id="get-getallfriendfavouritesongtitlesusername">GET <code>getAllFriendFavouriteSongTitles/{userName}</code></h3>
 <blockquote>
 <p>Returns all the song names of the songs that the user's friends have liked.</p>

@@ -6,8 +6,8 @@
 <details open="open">
   <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
   <ol>
-    <li><a href="#installation-visual-studio-code"><h3>Installation (Visual Studio Code)</h3></a></li>
-    <li><h3>Usage</h3><ul><li><a href="#song-microservice">Song Microservice</a></li><li><a href="#profile-microservice">Profile Microservice</a></li></ul</li>
+    <li><a href="#installation-visual-studio-code">Installation (Visual Studio Code)</a></li>
+    <li>Usage<ul><li><a href="#song-microservice">Song Microservice</a></li><li><a href="#profile-microservice">Profile Microservice</a></li></ul</li>
   </ol>
 </details>
 
@@ -30,7 +30,7 @@
 
 After installing the prerequisites, load the project and Maven and Spring Boot tools should show automagically. 🚀 
 
-<img src="./springboot.png" height="200">   
+<img src="https://raw.githubusercontent.com/navn-r/spotify-api-clone/main/docs/springboot.png" height="200">   
 
 *Press `Start` in the Spring Boot Dashboard and select both microservices*
 
@@ -75,6 +75,11 @@ By default, the Song Microservice runs on port `3001`, and port `3002` for the P
 }
 ```
 
+<br />
+<br />
+
+
+
 ### DELETE  `/deleteSongById/{songId}`
 > Deletes the song from MongoDB and all Profiles that have added it to their favorites list.
 
@@ -84,6 +89,12 @@ By default, the Song Microservice runs on port `3001`, and port `3002` for the P
 **Expected Response**  
   - `OK`, if the song was deleted successfully  
   - `<string>`, any other status if the song was not deleted successfully  
+
+<br />
+<br />
+
+
+
 
 ### POST  `/addSong`
 > Adds a song to the database.
@@ -113,6 +124,12 @@ By default, the Song Microservice runs on port `3001`, and port `3002` for the P
   ​"status"​: ​"OK"
 }
 ```
+
+
+<br />
+<br />
+
+
 
 ### PUT `/updateSongFavouritesCount/{songId}?shouldDecrement=`
 > Updates the song's favorites count.
@@ -150,6 +167,12 @@ By default, the Song Microservice runs on port `3001`, and port `3002` for the P
     - `OK`, if the profile was created successfully
     - `<string>`, any other status if the profile was not created successfully
 
+
+<br />
+<br />
+
+
+
 ### PUT  `/followFriend/{username}/{friendUserName}`
 > Allows a profile to follow another profile.
 
@@ -161,6 +184,12 @@ By default, the Song Microservice runs on port `3001`, and port `3002` for the P
   - `status`
     - `OK`, if the the user was able to follow successfully
     - `<string>`, any other status if the the user was not able to follow successfully
+
+
+<br />
+<br />
+
+
 
 ### PUT  `/unfollowFriend/{username}/{friendUserName}`
 > Allows a profile to unfollow another profile.
@@ -174,6 +203,13 @@ By default, the Song Microservice runs on port `3001`, and port `3002` for the P
     - `OK`, if the the user was able to unfollow successfully
     - `<string>`, any other status if the the user was not able to unfollow successfully
 
+
+<br />
+<br />
+
+
+
+
 ### PUT  `/likeSong/{userName}/{songId}`
 > Allows a profile to like a song and add it to their liked songs playlist.
 
@@ -186,6 +222,13 @@ By default, the Song Microservice runs on port `3001`, and port `3002` for the P
     - `OK`, if the the user was able to like the song successfully
     - `<string>`, any other status if the the user was not able to like the song successfully
 
+
+<br />
+<br />
+
+
+
+
 ### PUT  `/unlikeSong/{userName}/{songId}`
 > Allows a profile to unlike a song and add it to their liked songs playlist.
 
@@ -197,6 +240,13 @@ By default, the Song Microservice runs on port `3001`, and port `3002` for the P
   - `status`
     - `OK`, if the the user was able to unlike the song successfully
     - `<string>`, any other status if the the user was not able to unlike the song successfully
+
+
+<br />
+<br />
+
+
+
 
 ### GET `getAllFriendFavouriteSongTitles/{userName}`
 > Returns all the song names of the songs that the user's friends have liked.
