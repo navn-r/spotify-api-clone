@@ -55,8 +55,7 @@ By default, the Song Microservice runs on port `3001`, and port `3002` for the P
 
 <br />
 
-## Song Microservice  
-<br />
+## Song Microservice    
 
 ### GET  `/getSongTitleById/{songId}`
 > Retrieves the song title given the `songId`.
@@ -136,9 +135,7 @@ By default, the Song Microservice runs on port `3001`, and port `3002` for the P
 
 <br />
 
-## Profile Microservice
-<br />
-
+## Profile Microservice  
 
 ### POST `/profile`
 > Adds a profile to the database and creates a liked songs playlist.

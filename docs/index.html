@@ -1,8 +1,33 @@
-<h1 id="spotify-api-clone-">Spotify API Clone 🎵💽</h1>
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Spotify API Clone &#x1F3B5;&#x1F4BD;</title>
+        <style>
+</style>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+</style>
+        
+        
+        
+    </head>
+    <body class="vscode-body vscode-light">
+        <h1 id="spotify-api-clone-">Spotify API Clone 🎵💽</h1>
 <blockquote>
 <p>Documentation and Usage</p>
 </blockquote>
-<p><br /></p>
+<br />
 <details open="open">
   <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
   <ol>
@@ -10,12 +35,11 @@
     <li><h3>Usage</h3><ul><li><a href="#song-microservice">Song Microservice</a></li><li><a href="#profile-microservice">Profile Microservice</a></li></ul</li>
   </ol>
 </details>
-
-<p><br /></p>
+<br />
 <hr>
-<p><br /></p>
-<h2 id="installation-visual-studio-code-">Installation (Visual Studio Code)</h2>
-<h3 id="prerequisites-">Prerequisites:</h3>
+<br />
+<h2 id="installation-visual-studio-code">Installation (Visual Studio Code)</h2>
+<h3 id="prerequisites">Prerequisites:</h3>
 <ul>
 <li><a href="https://neo4j.com/download/">Neo4j Desktop</a> with database version 3.5.25</li>
 <li><a href="https://docs.mongodb.com/manual/tutorial/">MongoDB Community Edition</a></li>
@@ -24,96 +48,97 @@
 <li><a href="https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack">Java Extension Pack for Visual Studio Code</a></li>
 <li><a href="https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack">Spring Boot Extension Pack for Visual Studio Code</a></li>
 </ul>
-<p>After installing the prerequisites, load the project and Maven and Spring Boot tools should show automagically. 🚀 </p>
-<p><img src="./springboot.png" height="200">   </p>
+<p>After installing the prerequisites, load the project and Maven and Spring Boot tools should show automagically. 🚀</p>
+<img src="file:////home/navinn/Code/spotify-api-clone/docs/springboot.png" height="200">   
 <p><em>Press <code>Start</code> in the Spring Boot Dashboard and select both microservices</em></p>
-<p><strong>Note:</strong> Both the Neo4j and MongoDB databases should be running <strong><em>before</em></strong> starting both microservices.  </p>
+<p><strong>Note:</strong> Both the Neo4j and MongoDB databases should be running <strong><em>before</em></strong> starting both microservices.</p>
 <p>By default, the Song Microservice runs on port <code>3001</code>, and port <code>3002</code> for the Profile Microservice.</p>
 <h4 id="for-mongodb">For MongoDB</h4>
 <ul>
 <li>Database Name: <code>“csc301-test”</code></li>
 <li>Collection Name: <code>&quot;songs&quot;</code></li>
-<li>Connected to port <code>27107</code> </li>
+<li>Connected to port <code>27107</code></li>
 </ul>
 <h4 id="for-neo4j">For Neo4j</h4>
 <ul>
 <li>Database username and password: <code>&quot;neo4j&quot;</code> and <code>&quot;1234&quot;</code> respectively</li>
 <li>Connected to port <code>7687</code></li>
 </ul>
-<p><br /></p>
+<br />
 <hr>
-<p><br /></p>
+<br />
 <h2 id="song-microservice">Song Microservice</h2>
-<p><br /></p>
-<h3 id="get-getsongtitlebyid-songid-">GET  <code>/getSongTitleById/{songId}</code></h3>
+<h3 id="get--getsongtitlebyidsongid">GET  <code>/getSongTitleById/{songId}</code></h3>
 <blockquote>
 <p>Retrieves the song title given the <code>songId</code>.</p>
 </blockquote>
-<p><strong>URL Parameters</strong>  </p>
+<p><strong>URL Parameters</strong></p>
 <ul>
-<li><code>songId</code> is the _id of a specific song  </li>
+<li><code>songId</code> is the _id of a specific song</li>
 </ul>
-<p><strong>Expected Response</strong>  </p>
+<p><strong>Expected Response</strong></p>
 <ul>
-<li><code>OK</code>, if the title was retrieved successfully  </li>
-<li><code>&lt;string&gt;</code>, any other status if the song was not retrieved successfully  </li>
+<li><code>OK</code>, if the title was retrieved successfully</li>
+<li><code>&lt;string&gt;</code>, any other status if the song was not retrieved successfully</li>
 </ul>
 <p><strong>Example Response</strong></p>
-<pre><code class="lang-JSON">{
-  <span class="hljs-attr">"status"</span>: <span class="hljs-string">"OK"</span>,
-  <span class="hljs-attr">"data"</span>: <span class="hljs-string">"Never gonna give you up"</span>
+<pre><code class="language-JSON"><div>{
+  <span class="hljs-attr">&quot;status&quot;</span>: <span class="hljs-string">&quot;OK&quot;</span>,
+  <span class="hljs-attr">&quot;data&quot;</span>: <span class="hljs-string">&quot;Never gonna give you up&quot;</span>
 }
-</code></pre>
-<h3 id="delete-deletesongbyid-songid-">DELETE  <code>/deleteSongById/{songId}</code></h3>
+</div></code></pre>
+<h3 id="delete--deletesongbyidsongid">DELETE  <code>/deleteSongById/{songId}</code></h3>
 <blockquote>
 <p>Deletes the song from MongoDB and all Profiles that have added it to their favorites list.</p>
 </blockquote>
 <p><strong>URL Parameters</strong></p>
 <ul>
-<li><code>songId</code> is the _id of a specific song  </li>
+<li><code>songId</code> is the _id of a specific song</li>
 </ul>
-<p><strong>Expected Response</strong>  </p>
+<p><strong>Expected Response</strong></p>
 <ul>
-<li><code>OK</code>, if the song was deleted successfully  </li>
-<li><code>&lt;string&gt;</code>, any other status if the song was not deleted successfully  </li>
+<li><code>OK</code>, if the song was deleted successfully</li>
+<li><code>&lt;string&gt;</code>, any other status if the song was not deleted successfully</li>
 </ul>
-<h3 id="post-addsong-">POST  <code>/addSong</code></h3>
+<h3 id="post--addsong">POST  <code>/addSong</code></h3>
 <blockquote>
 <p>Adds a song to the database.</p>
 </blockquote>
-<p><strong>Query Parameters</strong>  </p>
+<p><strong>Query Parameters</strong></p>
 <ul>
 <li><code>songName</code> : the name of the song</li>
 <li><code>songArtistFullName</code> : the name of the song artist</li>
-<li><code>songAlbum</code> : the album of the song  </li>
+<li><code>songAlbum</code> : the album of the song</li>
 </ul>
-<p><strong>Expected Response</strong>  </p>
+<p><strong>Expected Response</strong></p>
 <ul>
-<li><code>status</code><ul>
+<li><code>status</code>
+<ul>
 <li><code>OK</code>, if the song was deleted successfully</li>
 <li><code>&lt;string&gt;</code>, any other status if the song was not deleted successfully</li>
 </ul>
 </li>
-<li><code>data</code><ul>
+<li><code>data</code>
+<ul>
 <li>song object</li>
 </ul>
 </li>
 </ul>
 <p><strong>Example Response</strong></p>
-<pre><code class="lang-JSON">{
-  ​<span class="hljs-string">"data"</span>​: {
-    ​<span class="hljs-string">"songName"</span>​: ​<span class="hljs-string">"testDeleteSong"</span>​,
-    ​<span class="hljs-string">"songArtistFullName"</span>​: ​<span class="hljs-string">"111"</span>​,​
-    <span class="hljs-string">"songAlbum"</span>​: ​<span class="hljs-string">"testDeleteSongArtist"</span>​,
-    ​<span class="hljs-string">"songAmountFavourites"</span>​: ​<span class="hljs-string">"0"</span>​,
-    ​<span class="hljs-string">"id"</span>​: ​<span class="hljs-string">"5d65df689a2efe318808f4cc"</span>    
+<pre><code class="language-JSON"><div>{
+  ​<span class="hljs-attr">&quot;data&quot;</span>​: {
+    ​<span class="hljs-attr">&quot;songName&quot;</span>​: ​<span class="hljs-string">&quot;testDeleteSong&quot;</span>​,
+    ​<span class="hljs-attr">&quot;songArtistFullName&quot;</span>​: ​<span class="hljs-string">&quot;111&quot;</span>​,​
+    <span class="hljs-attr">&quot;songAlbum&quot;</span>​: ​<span class="hljs-string">&quot;testDeleteSongArtist&quot;</span>​,
+    ​<span class="hljs-attr">&quot;songAmountFavourites&quot;</span>​: ​<span class="hljs-string">&quot;0&quot;</span>​,
+    ​<span class="hljs-attr">&quot;id&quot;</span>​: ​<span class="hljs-string">&quot;5d65df689a2efe318808f4cc&quot;</span>    
   },
-  ​<span class="hljs-string">"status"</span>​: ​<span class="hljs-string">"OK"</span>
+  ​<span class="hljs-attr">&quot;status&quot;</span>​: ​<span class="hljs-string">&quot;OK&quot;</span>
 }
-</code></pre>
-<h3 id="put-updatesongfavouritescount-songid-shoulddecrement-">PUT <code>/updateSongFavouritesCount/{songId}?shouldDecrement=</code></h3>
+</div></code></pre>
+<h3 id="put-updatesongfavouritescountsongidshoulddecrement">PUT <code>/updateSongFavouritesCount/{songId}?shouldDecrement=</code></h3>
 <blockquote>
-<p>Updates the song&#39;s favorites count.</p>
+<p>Updates the song's favorites count.</p>
 </blockquote>
 <p><strong>URL Parameters</strong></p>
 <ul>
@@ -121,25 +146,26 @@
 </ul>
 <p><strong>Query Parameters</strong></p>
 <ul>
-<li><code>shouldDecrement</code> : string values of <code>true</code> or <code>false</code><ul>
+<li><code>shouldDecrement</code> : string values of <code>true</code> or <code>false</code>
+<ul>
 <li>states where the song count should be incremented or decremented by 1</li>
 </ul>
 </li>
 </ul>
 <p><strong>Expected Response</strong></p>
 <ul>
-<li><code>status</code><ul>
+<li><code>status</code>
+<ul>
 <li><code>OK</code>, if the song was updated successfully</li>
 <li><code>&lt;string&gt;</code>, any other status if the song was not updated successfully</li>
 </ul>
 </li>
 </ul>
-<p><br /></p>
+<br />
 <hr>
-<p><br /></p>
+<br />
 <h2 id="profile-microservice">Profile Microservice</h2>
-<p><br /></p>
-<h3 id="post-profile-">POST <code>/profile</code></h3>
+<h3 id="post-profile">POST <code>/profile</code></h3>
 <blockquote>
 <p>Adds a profile to the database and creates a liked songs playlist.</p>
 </blockquote>
@@ -151,13 +177,14 @@
 </ul>
 <p><strong>Expected Response</strong></p>
 <ul>
-<li><code>status</code><ul>
+<li><code>status</code>
+<ul>
 <li><code>OK</code>, if the profile was created successfully</li>
 <li><code>&lt;string&gt;</code>, any other status if the profile was not created successfully</li>
 </ul>
 </li>
 </ul>
-<h3 id="put-followfriend-username-friendusername-">PUT  <code>/followFriend/{username}/{friendUserName}</code></h3>
+<h3 id="put--followfriendusernamefriendusername">PUT  <code>/followFriend/{username}/{friendUserName}</code></h3>
 <blockquote>
 <p>Allows a profile to follow another profile.</p>
 </blockquote>
@@ -168,13 +195,14 @@
 </ul>
 <p><strong>Expected Response</strong></p>
 <ul>
-<li><code>status</code><ul>
+<li><code>status</code>
+<ul>
 <li><code>OK</code>, if the the user was able to follow successfully</li>
 <li><code>&lt;string&gt;</code>, any other status if the the user was not able to follow successfully</li>
 </ul>
 </li>
 </ul>
-<h3 id="put-unfollowfriend-username-friendusername-">PUT  <code>/unfollowFriend/{username}/{friendUserName}</code></h3>
+<h3 id="put--unfollowfriendusernamefriendusername">PUT  <code>/unfollowFriend/{username}/{friendUserName}</code></h3>
 <blockquote>
 <p>Allows a profile to unfollow another profile.</p>
 </blockquote>
@@ -185,13 +213,14 @@
 </ul>
 <p><strong>Expected Response</strong></p>
 <ul>
-<li><code>status</code><ul>
+<li><code>status</code>
+<ul>
 <li><code>OK</code>, if the the user was able to unfollow successfully</li>
 <li><code>&lt;string&gt;</code>, any other status if the the user was not able to unfollow successfully</li>
 </ul>
 </li>
 </ul>
-<h3 id="put-likesong-username-songid-">PUT  <code>/likeSong/{userName}/{songId}</code></h3>
+<h3 id="put--likesongusernamesongid">PUT  <code>/likeSong/{userName}/{songId}</code></h3>
 <blockquote>
 <p>Allows a profile to like a song and add it to their liked songs playlist.</p>
 </blockquote>
@@ -202,13 +231,14 @@
 </ul>
 <p><strong>Expected Response</strong></p>
 <ul>
-<li><code>status</code><ul>
+<li><code>status</code>
+<ul>
 <li><code>OK</code>, if the the user was able to like the song successfully</li>
 <li><code>&lt;string&gt;</code>, any other status if the the user was not able to like the song successfully</li>
 </ul>
 </li>
 </ul>
-<h3 id="put-unlikesong-username-songid-">PUT  <code>/unlikeSong/{userName}/{songId}</code></h3>
+<h3 id="put--unlikesongusernamesongid">PUT  <code>/unlikeSong/{userName}/{songId}</code></h3>
 <blockquote>
 <p>Allows a profile to unlike a song and add it to their liked songs playlist.</p>
 </blockquote>
@@ -219,15 +249,16 @@
 </ul>
 <p><strong>Expected Response</strong></p>
 <ul>
-<li><code>status</code><ul>
+<li><code>status</code>
+<ul>
 <li><code>OK</code>, if the the user was able to unlike the song successfully</li>
 <li><code>&lt;string&gt;</code>, any other status if the the user was not able to unlike the song successfully</li>
 </ul>
 </li>
 </ul>
-<h3 id="get-getallfriendfavouritesongtitles-username-">GET <code>getAllFriendFavouriteSongTitles/{userName}</code></h3>
+<h3 id="get-getallfriendfavouritesongtitlesusername">GET <code>getAllFriendFavouriteSongTitles/{userName}</code></h3>
 <blockquote>
-<p>Returns all the song names of the songs that the user&#39;s friends have liked.</p>
+<p>Returns all the song names of the songs that the user's friends have liked.</p>
 </blockquote>
 <p><strong>URL Parameters</strong></p>
 <ul>
@@ -236,30 +267,35 @@
 </ul>
 <p><strong>Expected Response</strong></p>
 <ul>
-<li><code>status</code><ul>
+<li><code>status</code>
+<ul>
 <li><code>OK</code>, if the names of songs were retrieved successfully</li>
 <li><code>&lt;string&gt;</code>, any other status if the names of songs were not retrieved successfully</li>
 </ul>
 </li>
-<li><code>data</code><ul>
+<li><code>data</code>
+<ul>
 <li>list of songs</li>
 </ul>
 </li>
 </ul>
 <p><strong>Example Response</strong></p>
-<pre><code class="lang-JSON">{​
-  <span class="hljs-string">"data"</span>​: {​
-    <span class="hljs-string">"tahmid"</span>​: [
-        ​<span class="hljs-string">"The Lego Movie"</span>​,
-        ​<span class="hljs-string">"Henry IV"</span>​,​
-        <span class="hljs-string">"Land of Milk and Honey"</span>
+<pre><code class="language-JSON"><div>{​
+  <span class="hljs-attr">&quot;data&quot;</span>​: {​
+    <span class="hljs-attr">&quot;tahmid&quot;</span>​: [
+        ​<span class="hljs-string">&quot;The Lego Movie&quot;</span>​,
+        ​<span class="hljs-string">&quot;Henry IV&quot;</span>​,​
+        <span class="hljs-string">&quot;Land of Milk and Honey&quot;</span>
     ],​
-    <span class="hljs-string">"shabaz"</span>​: [
-        ​<span class="hljs-string">"Sliver"</span>​,
-        ​<span class="hljs-string">"Off the Black"</span>​,​
-        <span class="hljs-string">"The Lego Movie"</span>
+    <span class="hljs-attr">&quot;shabaz&quot;</span>​: [
+        ​<span class="hljs-string">&quot;Sliver&quot;</span>​,
+        ​<span class="hljs-string">&quot;Off the Black&quot;</span>​,​
+        <span class="hljs-string">&quot;The Lego Movie&quot;</span>
     ]    
   },​
-  <span class="hljs-string">"status"</span>​: ​<span class="hljs-string">"OK"</span>
+  <span class="hljs-attr">&quot;status&quot;</span>​: ​<span class="hljs-string">&quot;OK&quot;</span>
 }
-</code></pre>
+</div></code></pre>
+
+    </body>
+    </html>
