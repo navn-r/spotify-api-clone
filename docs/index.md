@@ -229,7 +229,7 @@ By default, the Song Microservice runs on port `3001`, and port `3002` for the P
 
 
 
-### <span class="label label-success">GET</span> `getAllFriendFavouriteSongTitles/{userName}`
+### <span class="label label-success">GET</span> `/getAllFriendFavouriteSongTitles/{userName}`
 > Returns all the song names of the songs that the user's friends have liked.
 
 **URL Parameters**
