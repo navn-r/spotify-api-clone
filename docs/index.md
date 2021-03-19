@@ -1,23 +1,4 @@
-# Spotify API Clone 🎵💽
-> Documentation and Usage
-
-<br />
-
-<details open="open">
-  <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
-  <ol>
-    <li><a href="#installation-visual-studio-code">Installation (Visual Studio Code)</a></li>
-    <li>Usage<ul><li><a href="#song-microservice">Song Microservice</a></li><li><a href="#profile-microservice">Profile Microservice</a></li></ul</li>
-  </ol>
-</details>
-
-<br />
-
----
-
-<br />
-
-## Installation (Visual Studio Code)
+## Getting Started
 
 ### Prerequisites:
 
@@ -28,13 +9,13 @@
 - [Java Extension Pack for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack)
 - [Spring Boot Extension Pack for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack)
 
-After installing the prerequisites, load the project and Maven and Spring Boot tools should show automagically. 🚀 
+After installing the prerequisites, load the project and Maven and Spring Boot tools should show automagically.
 
 <img src="https://raw.githubusercontent.com/navn-r/spotify-api-clone/main/docs/springboot.png" height="200">   
 
-*Press `Start` in the Spring Boot Dashboard and select both microservices*
+Press `Start` in the Spring Boot Dashboard and select both microservices
 
-**Note:** Both the Neo4j and MongoDB databases should be running **_before_** starting both microservices.  
+**Note:** Both the Neo4j and MongoDB databases should be running **before** starting both microservices.  
 
 By default, the Song Microservice runs on port `3001`, and port `3002` for the Profile Microservice.
 
@@ -57,7 +38,7 @@ By default, the Song Microservice runs on port `3001`, and port `3002` for the P
 
 ## Song Microservice    
 
-### GET  `/getSongTitleById/{songId}`
+### <span class="label label-success">GET</span>  `/getSongTitleById/{songId}`
 > Retrieves the song title given the `songId`.
 
 **URL Parameters**  
@@ -80,7 +61,7 @@ By default, the Song Microservice runs on port `3001`, and port `3002` for the P
 
 
 
-### DELETE  `/deleteSongById/{songId}`
+### <span class="label label-danger">DELETE</span>  `/deleteSongById/{songId}`
 > Deletes the song from MongoDB and all Profiles that have added it to their favorites list.
 
 **URL Parameters**
@@ -96,7 +77,7 @@ By default, the Song Microservice runs on port `3001`, and port `3002` for the P
 
 
 
-### POST  `/addSong`
+### <span class="label label-warning">POST</span>  `/addSong`
 > Adds a song to the database.
 
 **Query Parameters**  
@@ -131,7 +112,7 @@ By default, the Song Microservice runs on port `3001`, and port `3002` for the P
 
 
 
-### PUT `/updateSongFavouritesCount/{songId}?shouldDecrement=`
+### <span class="label label-primary">PUT</span> `/updateSongFavouritesCount/{songId}?shouldDecrement=`
 > Updates the song's favorites count.
 
 **URL Parameters**
@@ -154,7 +135,7 @@ By default, the Song Microservice runs on port `3001`, and port `3002` for the P
 
 ## Profile Microservice  
 
-### POST `/profile`
+### <span class="label label-warning">POST</span> `/profile`
 > Adds a profile to the database and creates a liked songs playlist.
 
 **Query Parameters**
@@ -173,7 +154,7 @@ By default, the Song Microservice runs on port `3001`, and port `3002` for the P
 
 
 
-### PUT  `/followFriend/{username}/{friendUserName}`
+### <span class="label label-primary">PUT</span>  `/followFriend/{username}/{friendUserName}`
 > Allows a profile to follow another profile.
 
 **URL Parameters**
@@ -191,7 +172,7 @@ By default, the Song Microservice runs on port `3001`, and port `3002` for the P
 
 
 
-### PUT  `/unfollowFriend/{username}/{friendUserName}`
+### <span class="label label-primary">PUT</span>  `/unfollowFriend/{username}/{friendUserName}`
 > Allows a profile to unfollow another profile.
 
 **URL Parameters**
@@ -210,7 +191,7 @@ By default, the Song Microservice runs on port `3001`, and port `3002` for the P
 
 
 
-### PUT  `/likeSong/{userName}/{songId}`
+### <span class="label label-primary">PUT</span>  `/likeSong/{userName}/{songId}`
 > Allows a profile to like a song and add it to their liked songs playlist.
 
 **URL Parameters**
@@ -229,7 +210,7 @@ By default, the Song Microservice runs on port `3001`, and port `3002` for the P
 
 
 
-### PUT  `/unlikeSong/{userName}/{songId}`
+### <span class="label label-primary">PUT</span>  `/unlikeSong/{userName}/{songId}`
 > Allows a profile to unlike a song and add it to their liked songs playlist.
 
 **URL Parameters**
@@ -248,7 +229,7 @@ By default, the Song Microservice runs on port `3001`, and port `3002` for the P
 
 
 
-### GET `getAllFriendFavouriteSongTitles/{userName}`
+### <span class="label label-success">GET</span> `getAllFriendFavouriteSongTitles/{userName}`
 > Returns all the song names of the songs that the user's friends have liked.
 
 **URL Parameters**

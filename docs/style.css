@@ -1,0 +1,65 @@
+html {
+  font-size: initial !important;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --green: #1db954;
+  --gray: #535353;
+  --black: #121212;
+  --dark-gray: #212121;
+  --light-gray: #b3b3b3;
+}
+
+body {
+  background-color: white;
+  color: var(--black);
+}
+
+header[role="banner"] {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding: 0 1rem;
+  align-items: center;
+  height: 70px;
+  background-color: var(--black);
+}
+
+#logo {
+  height: auto;
+  width: 250px;
+}
+
+
+aside {
+  overflow: initial;
+}
+
+aside nav {
+  position: sticky;
+  top: 55px;
+}
+
+.post-content h1,
+.post-content h2,
+.post-content h3,
+.post-content h4 {
+  padding-top: 10px !important;
+}
+
+blockquote {
+  font-size: initial !important;
+  margin: 15px 0 !important;
+  font-weight: 500 !important;
+}
+
+.post-content .label {
+  font-size: 80% !important;
+  margin: 0 !important;
+  vertical-align: initial !important;
+}
+
+pre {
+  color: #ffe030 !important;
+}
