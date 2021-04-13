@@ -1,1 +1,108 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><script src="https://unpkg.com/showdown/dist/showdown.min.js"></script><link rel="shortcut icon" href="https://developer.spotify.com/images/favicon.ico" type="image/x-icon" /><link rel="stylesheet" href="https://sp-bootstrap.global.ssl.fastly.net/8.0.0/sp-bootstrap.min.css" preload /><link rel="stylesheet" href="https://developer.spotify.com/css/main.css" preload /><link rel="stylesheet" href="style.css" /><title>Docs | Spotify API Clone</title></head><body><div class="documentation general guides wrap"><header role="banner"><img id="logo" src="./spotify.svg" alt="" /></header><div id="page-content"><nav id="secondary-navbar"><div class="bg-accent">WEB API</div><ul><li><a href="#top" class="active">Documentation</a></li><li><a href="https://github.com/navn-r/spotify-api-clone" target="_blank" >GitHub</a ></li></ul></nav><div class="wrap-content"><aside><nav><div class="page-title">Documentation</div><ul class="outer"><li><a href="#getting-started">Getting Started</a></li><li><a href="#song-microservice">Song Microservice</a></li><li><a href="#profile-microservice">Profile Microservice</a></li></ul></nav></aside><main><article class="post"><header class="post-header"><h1 class="post-title">API Documentation <span class="label label-info">Clone</span></h1></header><div class="post-content"><strong>Note: </strong>This is not an official API for Spotify. <img style="margin-top: 10px" src="./neo4j.png" alt=""></div></article></main></div></div></div><footer class="footer footer-default" role="contentinfo"><nav class="row-small"><div class="container"><div class="row"><div class="col-xs-7"><ul class="nav nav-small"><li><a href="#top" class="externalLink">Back To Top</a></li><li><a href="https://github.com/navn-r/spotify-api-clone" target="_blank" class="externalLink">GitHub</a></li></ul></div><div class="col-xs-5"><small class="copyright pull-right">© 2020 Navinn Ravindaran & Clara Chick</small></div></div></div></nav></footer><script>(async ()=>{ const converter=new showdown.Converter({ ghCompatibleHeaderId: true,}); const text=await fetch("index.md").then((res)=>res.text()); document.querySelector( "div.post-content" ).innerHTML +=converter.makeHtml(text);})(); </script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/showdown/dist/showdown.min.js"></script>
+    <link
+      rel="shortcut icon"
+      href="https://developer.spotify.com/images/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://sp-bootstrap.global.ssl.fastly.net/8.0.0/sp-bootstrap.min.css"
+      preload
+    />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Docs | Spotify API Clone</title>
+  </head>
+  <body>
+    <div class="documentation general guides wrap">
+      <header role="banner">
+        <img id="logo" src="./spotify.svg" alt="" />
+      </header>
+      <div id="page-content">
+        <nav id="secondary-navbar">
+          <div class="bg-accent">WEB API</div>
+          <ul>
+            <li><a href="#top" class="active">Documentation</a></li>
+            <li>
+              <a
+                href="https://github.com/navn-r/spotify-api-clone"
+                target="_blank"
+                >GitHub</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div class="wrap-content">
+          <aside>
+            <nav>
+              <div class="page-title">Documentation</div>
+              <ul class="outer">
+                <li><a href="#getting-started">Getting Started</a></li>
+                <li><a href="#song-microservice">Song Microservice</a></li>
+                <li>
+                  <a href="#profile-microservice">Profile Microservice</a>
+                </li>
+              </ul>
+            </nav>
+          </aside>
+          <main>
+            <article class="post">
+              <header class="post-header">
+                <h1 class="post-title">
+                  API Documentation <span class="label label-info">Clone</span>
+                </h1>
+              </header>
+              <div class="post-content">
+                <strong>Note: </strong>This is not an official API for Spotify.
+                <img style="margin-top: 10px" src="./neo4j.png" alt="" />
+              </div>
+            </article>
+          </main>
+        </div>
+      </div>
+    </div>
+    <footer class="footer footer-default" role="contentinfo">
+      <nav class="row-small">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-7">
+              <ul class="nav nav-small">
+                <li><a href="#top" class="externalLink">Back To Top</a></li>
+                <li>
+                  <a
+                    href="https://github.com/navn-r/spotify-api-clone"
+                    target="_blank"
+                    class="externalLink"
+                    >GitHub</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="col-xs-5">
+              <small class="copyright pull-right"
+                >© 2020 Navinn Ravindaran & Clara Chick</small
+              >
+            </div>
+          </div>
+        </div>
+      </nav>
+    </footer>
+    <script>
+      (async () => {
+        const converter = new showdown.Converter({
+          ghCompatibleHeaderId: true,
+        });
+        const text = await fetch("index.md").then((res) => res.text());
+        document.querySelector(
+          "div.post-content"
+        ).innerHTML += converter.makeHtml(text);
+      })();
+    </script>
+  </body>
+</html>
