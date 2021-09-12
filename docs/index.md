@@ -7,7 +7,7 @@
 - [Java Development Kit (JDK)](https://www.oracle.com/technetwork/java/javase/downloads/), version 1.8.
 - [Apache Maven](https://maven.apache.org/), version 3.0 or later.
 - [Java Extension Pack for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack)
-- [Spring Boot Extension Pack for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack)
+- [Spring Boot Extension Pack for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=Pivotal.vscode-boot-dev-pack)
 
 After installing the prerequisites, load the project and Maven and Spring Boot tools should show automagically.
 
